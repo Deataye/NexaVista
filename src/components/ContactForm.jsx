@@ -40,8 +40,8 @@ const ContactForm = () => {
 
         {/* Right - Contact Form */}
         <div className="lg:w-1/2 bg-[#ECE4D9] text-[#1A1816] p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-extrabold mb-4">What Can We Do For You?</h2>
-          <p className="text-sm mb-6">
+          <h2 className="text-[46px] leading-[55px] font-black mb-4">What Can We Do For You?</h2>
+          <p className="text-[16px] leading-[29px] font-normal mb-6">
             If you have any questions or need assistance, feel free to contact us and send us a message.
           </p>
 
@@ -51,13 +51,13 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Name"
                 required
-                className="w-full px-4 py-2 border rounded-md bg-[#F5EFE6] text-[#1A1816]"
+                className="w-full px-4 py-2 text-[16px] border rounded-md bg-[#F5EFE6] text-[#1A1816]"
               />
               <input
                 type="text"
                 placeholder="Phone"
                 required
-                className="w-full px-4 py-2 border rounded-md bg-[#F5EFE6] text-[#1A1816]"
+                className="w-full px-4 py-2 border text-[16px] rounded-md bg-[#F5EFE6] text-[#1A1816]"
               />
             </div>
 
@@ -65,18 +65,18 @@ const ContactForm = () => {
               type="email"
               placeholder="Email"
               required
-              className="w-full px-4 py-2 border rounded-md bg-[#F5EFE6] text-[#1A1816] mb-4"
+              className="w-full px-4 py-2 border rounded-md text-[16px] bg-[#F5EFE6] text-[#1A1816] mb-4"
             />
 
             <textarea
               placeholder="Messages"
               required
-              className="w-full px-4 py-2 border rounded-md bg-[#F5EFE6] text-[#1A1816] h-24 mb-4"
+              className="w-full px-4 py-2 border text-[16px] rounded-md bg-[#F5EFE6] text-[#1A1816] h-24 mb-4"
             ></textarea>
 
             {/* Captcha */}
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#1A1816] font-semibold">{captcha.question}</span>
+              <span className="text-[#1A1816] text-[16px] leading-[29px]  font-bold">{captcha.question}</span>
               <input
                 type="text"
                 value={captchaInput}
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-[#3F3A34] text-[#ECE4D9] px-6 py-2 rounded-md font-bold w-full"
+              className="bg-[#3F3A34] text-[#ECE4D9] text-[16px] leading-[26px] font-medium px-6 py-2 rounded-md font-bold w-full"
             >
               Submit Now
             </button>

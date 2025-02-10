@@ -8,25 +8,25 @@ const projects = [
     id: 1,
     title: "Human Ops",
     category: "HR Management",
-    image: "/projects/human-ops.jpg",
+    image: "/webdev_1.jpg",
   },
   {
     id: 2,
     title: "Smart Bulb",
     category: "Artificial Intelligence",
-    image: "/projects/smart-bulb.jpg",
+    image: "/webdev_2.jpg",
   },
   {
     id: 3,
     title: "Go2Life",
     category: "Job Finds",
-    image: "/projects/go2life.jpg",
+    image: "/webdev_3.jpg",
   },
   {
     id: 4,
     title: "Rocket",
     category: "Quiz App",
-    image: "/projects/rocket.jpg",
+    image: "/webdev_4.jpg",
   },
 ];
 
@@ -36,11 +36,11 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h3 className="text-sm uppercase tracking-widest text-[#3F3A34] font-bold">Our Projects</h3>
-          <h2 className="text-3xl md:text-4xl font-extrabold">
-            Our Outstanding <span className="text-[#3F3A34]">Projects</span> & Works
+          <h3 className="text-[18px] leading-[22px] uppercase tracking-widest text-[#3F3A34] font-bold">Our Projects</h3>
+          <h2 className="text-3xl md:text-[46px] leading-[55px] font-black">
+            Our Outstanding <span className="text-[#3F3A34] text-3xl md:text-[46px] leading-[55px] font-black ">Projects</span> & Works
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-[16px] leading-[29px] text-gray-400">
             We develop on-demand customized projects for our clients in the given time.
           </p>
         </div>

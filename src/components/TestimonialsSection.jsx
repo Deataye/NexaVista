@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: "Susan Persad",
     position: "CEO, Jacks4Hire",
-    image: "/testimonials/susan.jpg",
+    image: "/bachir.jpg",
     quote:
       "They took our idea during a call and came up with an app prototype that was very impressive and accurate.",
   },
@@ -15,7 +15,7 @@ const testimonials = [
     id: 2,
     name: "Putra Cyrillus Rabin",
     position: "CEO, Flovely",
-    image: "/testimonials/putra.jpg",
+    image: "/flovely_c.jpg",
     quote:
       "They are a task-oriented company, quite a big difference from the companies we had worked with in the past.",
   },
@@ -23,7 +23,7 @@ const testimonials = [
     id: 3,
     name: "Bachir El Kai",
     position: "CEO, Elite Fishing",
-    image: "/testimonials/bachir.jpg",
+    image: "/jacks_c.jpg",
     quote:
       "Generally, I don’t give reviews or testimonials, but their quality of work expertise and availability make an exception.",
   },
@@ -34,12 +34,12 @@ const TestimonialsSection = () => {
     <section className="bg-[#1A1816] text-[#ECE4D9] py-16">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h3 className="text-sm uppercase tracking-widest text-[#3F3A34] font-bold">
+        <div className="text-center mb-24">
+          <h3 className="text-[18px] leading-[22px] uppercase tracking-widest text-[#3F3A34] font-bold mb-8">
             Our Testimonials
           </h3>
-          <h2 className="text-3xl md:text-4xl font-extrabold">
-            Check Out What Our Clients Think of{" "}
+          <h2 className="text-3xl md:text-[46px] leading-[55px] font-black">
+            Check Out What  Our <br /> Clients Think  of <br /> {" "}
             <span className="text-[#3F3A34]">Our Services</span>
           </h2>
         </div>
@@ -61,9 +61,9 @@ const TestimonialsSection = () => {
                 />
               </div>
               <div className="mt-10">
-                <p className="italic text-gray-400">"{testimonial.quote}"</p>
-                <h3 className="mt-4 text-lg font-bold">{testimonial.name}</h3>
-                <p className="text-sm text-[#3F3A34]">{testimonial.position}</p>
+                <p className="italic text-[16px] leading-[29px] font-normal text-gray-400">"{testimonial.quote}"</p>
+                <h3 className="mt-4 text-[20px] leading-[24px] font-extrabold">{testimonial.name}</h3>
+                <p className="text-[16px] leading-[29px] font-normal text-[#3F3A34]">{testimonial.position}</p>
               </div>
             </div>
           ))}

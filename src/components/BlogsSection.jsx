@@ -10,7 +10,7 @@ const blogs = [
     category: "Technology",
     author: "Ajay Chaudhary",
     date: "January 13, 2025",
-    image: "/blogs/industrial-training.jpg",
+    image: "/Expertise_AppDev.jpg",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const blogs = [
     category: "Information Technology",
     author: "Ajay Chaudhary",
     date: "October 28, 2024",
-    image: "/blogs/nfc-payment.jpg",
+    image: "/Expertise_Copywriting.jpg",
   },
   {
     id: 3,
@@ -26,21 +26,21 @@ const blogs = [
     category: "Technology",
     author: "Ajay Chaudhary",
     date: "October 21, 2024",
-    image: "/blogs/react-vs-vue.jpg",
+    image: "/Expertise_Designing.jpg",
   },
 ];
 
 const BlogsSection = () => {
   return (
-    <section className="bg-[#1A1816] text-[#ECE4D9] py-16">
+    <section className="bg-[#ECE4D9] text-[#3F3A34]  py-16">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold">
-            Our <span className="text-[#3F3A34]">Latest Blogs</span>
+          <h2 className="text-3xl md:text-[46px] leading-[55px] font-black">
+            Our <span className="text-[#6B6159]">Latest Blogs</span>
           </h2>
           <Link href="/blog">
-            <button className="bg-[#3F3A34] hover:bg-[#ECE4D9] hover:text-[#1A1816] text-[#ECE4D9] px-6 py-2 rounded-lg transition">
+            <button className="bg-[#3F3A34] text-[16px] leading-[26px] font-medium hover:bg-[#6B6159] hover:text-[#ECE4D9] text-[#ECE4D9] px-6 py-2 rounded-lg transition">
               All Blogs →
             </button>
           </Link>
@@ -62,14 +62,14 @@ const BlogsSection = () => {
                   height={300}
                   className="w-full h-56 object-cover"
                 />
-                <span className="absolute top-3 left-3 bg-[#3F3A34] text-[#ECE4D9] px-3 py-1 text-xs font-semibold rounded">
+                <span className="absolute top-3 left-3 bg-[#3F3A34] text-[#ECE4D9] px-3 py-1 text-[14px] leading-[29px] font-normal rounded">
                   {blog.category}
                 </span>
               </div>
 
               {/* Blog Content */}
               <div className="p-5">
-                <h3 className="text-lg font-bold hover:text-[#3F3A34] transition">
+                <h3 className="text-lg text-[#ECE4D9] font-bold hover:text-[#3F3A34] transition">
                   {blog.title}
                 </h3>
                 <p className="text-sm text-gray-400 mt-2">

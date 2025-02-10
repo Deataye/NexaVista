@@ -21,48 +21,49 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen bg-black">
+    <section className="relative py-4 w-full h-screen bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{ backgroundImage: "url('/Home.jpg')" }}></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
-        <h1 className="text-5xl font-extrabold leading-tight">
-          Your Trusted Digital <br />
-          Transformation & App <br />
-          Development Partner
+      <div className=" justify-center h-full  max-w-[1550px] mx-auto ">
+      <div className="relative z-10 flex  flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
+        <h1 className="text-[68px] font-extrabold leading-tight">
+        We Build Websites,<br />
+         Apps And Strategies <br />
+         to Grow Your Business. 
         </h1>
-        <p className="mt-4 text-lg max-w-lg">
-          We are a recognized technology partner that unleashes the next customer experience.
-          Advising, designing, and developing incredible software and digital products for 10 years.
+        <p className="mt-4 text-[20px] max-w-4xl">
+        NexaVista Technologies is your partner in turning complex ideas into intuitive digital solutions that resonate with your audience.
         </p>
 
         {/* CTA Button */}
-        <button className="mt-6 bg-[#3F3A34] hover:bg-[#2F2A24] text-[#ECE4D9] px-6 py-3 rounded-lg text-lg font-semibold transition-all">
+        <button className="mt-6 bg-[#3F3A34] hover:bg-[#2F2A24] text-[#ECE4D9] px-6 py-3 rounded-lg text-[16px] font-medium transition-all">
           Get In Touch →
         </button>
       </div>
+      </div>
 
       {/* Stats Section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 py-6">
+      <div className="absolute bottom-0 left-0 right-0 bg-[#1A1816]  py-6">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[#ECE4D9]">
           {/* Counter Boxes */}
           <div>
-            <span className="text-4xl font-bold">{experience}+</span>
-            <p className="text-gray-400">Years Of Experience</p>
+            <span className="text-[54px] font-black">{experience}+</span>
+            <p className="text-gray-400 text-[18px] font-normal ">Years Of Experience</p>
           </div>
           <div>
-            <span className="text-4xl font-bold">{projects}+</span>
-            <p className="text-gray-400">Projects Completed</p>
+            <span className="text-[54px] font-black">{projects}+</span>
+            <p className="text-gray-400 text-[18px] font-normal" >Projects Completed</p>
           </div>
           <div>
-            <span className="text-4xl font-bold">{developers}+</span>
-            <p className="text-gray-400">Skilled Developers</p>
+            <span className="text-[54px] font-black">{developers}+</span>
+            <p className="text-gray-400 text-[18px] font-normal" >Skilled Developers</p>
           </div>
           <div>
-            <span className="text-4xl font-bold">{clients}+</span>
-            <p className="text-gray-400">Satisfied Clients</p>
+            <span className="text-[54px] font-black">{clients}+</span>
+            <p className="text-gray-400 text-[18px] font-normal">Satisfied Clients</p>
           </div>
         </div>
       </div>
