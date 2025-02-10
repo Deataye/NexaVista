@@ -12,7 +12,7 @@ const Footer = () => {
           <Link href="/" className="text-2xl font-bold flex items-center">
             <img src="/logo.png" alt="Logo" className="h-12 w-12 mr-2" />
           </Link>
-          <p className="mt-4 text-sm text-[#ECE4D9]">
+          <p className="mt-4 text-[16px] leading-[29px] font-normal text-[#ECE4D9]">
             NexaVista leads in web and mobile app development, serving startups, small businesses, and enterprises with premium solutions.
           </p>
           <div className="flex space-x-3 mt-4">
@@ -30,8 +30,8 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold text-[#3F3A34] mb-4">Services</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-[20px] font-extrabold leading-[24px] text-[#ECE4D9] mb-4">Services</h3>
+          <ul className="space-y-2 text-[#ECE4D9] text-[16px] leading-[29px] ">
             <li>
               <Link href="/services/web-development" className="hover:text-[#3F3A34]">
                 Web Development
@@ -62,20 +62,20 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div>
-          <h3 className="text-lg font-semibold text-[#3F3A34] mb-4">Contact</h3>
-          <p className="text-sm">447 Broadway, 2nd Floor, New York, NY 10013</p>
-          <p className="flex items-center mt-2 text-sm">
+          <h3 className="text-[20px] font-extrabold leading-[24px] text-[#ECE4D9] mb-4">Contact</h3>
+          <p className="text-[#ECE4D9] text-[16px] leading-[29px]">447 Broadway, 2nd Floor, New York, NY 10013</p>
+          <p className="flex items-center mt-2 text-[#ECE4D9] text-[16px] leading-[29px]">
             <Phone size={16} className="mr-2" /> +1 317 884 8958
           </p>
-          <p className="flex items-center mt-2 text-sm">
+          <p className="flex items-center mt-2 text-[#ECE4D9] text-[16px] leading-[29px]">
             <Mail size={16} className="mr-2" /> info@nexavista.com
           </p>
         </div>
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-lg font-semibold text-[#3F3A34] mb-4">Newsletter</h3>
-          <p className="text-sm">
+          <h3 className="text-[20px] font-extrabold leading-[24px] text-[#ECE4D9] mb-4">Newsletter</h3>
+          <p className="text-[#ECE4D9] text-[16px] leading-[29px]">
             Stay updated with the latest news, trends, and offers.
           </p>
           <div className="mt-4">
@@ -92,7 +92,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="text-center text-sm text-[#ECE4D9] border-t border-[#3F3A34] mt-8 pt-4">
+      <div className="text-center text-[16px] leading-[29px] text-[#ECE4D9] border-t border-[#3F3A34] mt-8 pt-4">
         © {new Date().getFullYear()} NexaVista. All Rights Reserved.
       </div>
     </footer>

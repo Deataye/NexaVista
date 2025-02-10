@@ -25,12 +25,12 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="bg-[#1A1816] text-[#ECE4D9] py-16">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
+    <section className="bg-[#ECE4D9] text-[#ECE4D9] py-20">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-">
         {/* Left - Image */}
-        <div className="lg:w-1/2 hidden lg:flex justify-center">
+        <div className="lg:w-1/2 hidden lg:flex justify-end">
           <Image
-            src="/Expertise_WebDev.jpg"
+            src="/request-a-call-back-im1.jpg"
             alt="Contact"
             width={500}
             height={300}
@@ -39,7 +39,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right - Contact Form */}
-        <div className="lg:w-1/2 bg-[#ECE4D9] text-[#1A1816] p-8 rounded-lg shadow-lg">
+        <div className="lg:w-1/2 bg-[#ECE4D9] text-[#1A1816] p-8 rounded-lg ">
           <h2 className="text-[46px] leading-[55px] font-black mb-4">What Can We Do For You?</h2>
           <p className="text-[16px] leading-[29px] font-normal mb-6">
             If you have any questions or need assistance, feel free to contact us and send us a message.

@@ -1,6 +1,7 @@
 "use client"; // Required for React Hooks in Next.js App Router
 
 import { useEffect, useState } from "react";
+import { FaRegCalendarAlt, FaTasks, FaUsers, FaSmile } from 'react-icons/fa';
 
 const HeroSection = () => {
   // Counter Animation
@@ -46,27 +47,39 @@ const HeroSection = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[#1A1816]  py-6">
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[#ECE4D9]">
-          {/* Counter Boxes */}
-          <div>
-            <span className="text-[54px] font-black">{experience}+</span>
-            <p className="text-gray-400 text-[18px] font-normal ">Years Of Experience</p>
-          </div>
-          <div>
-            <span className="text-[54px] font-black">{projects}+</span>
-            <p className="text-gray-400 text-[18px] font-normal" >Projects Completed</p>
-          </div>
-          <div>
-            <span className="text-[54px] font-black">{developers}+</span>
-            <p className="text-gray-400 text-[18px] font-normal" >Skilled Developers</p>
-          </div>
-          <div>
-            <span className="text-[54px] font-black">{clients}+</span>
-            <p className="text-gray-400 text-[18px] font-normal">Satisfied Clients</p>
-          </div>
-        </div>
+      <div className="absolute bottom-0  left-0 right-0 bg-[#1A1816] py-6">
+  <div className="container mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[#ECE4D9]">
+    {/* Counter Boxes */}
+    <div className="flex items-center justify-center">
+      <FaRegCalendarAlt className="text-[#ECE4D9] mr-4" size={52} />
+      <div>
+        <span className="text-[54px] font-black">{experience}+</span>
+        <p className="text-gray-400 text-[18px] font-normal">Years Of Experience</p>
       </div>
+    </div>
+    <div className="flex items-center justify-center">
+      <FaTasks className="text-[#ECE4D9] mr-4" size={52} />
+      <div>
+        <span className="text-[54px] font-black">{projects}+</span>
+        <p className="text-gray-400 text-[18px] font-normal">Projects Completed</p>
+      </div>
+    </div>
+    <div className="flex items-center justify-center">
+      <FaUsers className="text-[#ECE4D9] mr-4" size={52} />
+      <div>
+        <span className="text-[54px] font-black">{developers}+</span>
+        <p className="text-gray-400 text-[18px] font-normal">Skilled Developers</p>
+      </div>
+    </div>
+    <div className="flex items-center justify-center">
+      <FaSmile className="text-[#ECE4D9] mr-4 " size={52} />
+      <div>
+        <span className="text-[54px] font-black">{clients}+</span>
+        <p className="text-gray-400 text-[18px] font-normal">Satisfied Clients</p>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
   );
 };

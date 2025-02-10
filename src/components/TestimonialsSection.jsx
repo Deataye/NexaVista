@@ -31,7 +31,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-[#1A1816] text-[#ECE4D9] py-16">
+    <section className=" bg-[#ECE4D9] text-[#1A1816] py-20">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-24">
@@ -62,8 +62,8 @@ const TestimonialsSection = () => {
               </div>
               <div className="mt-10">
                 <p className="italic text-[16px] leading-[29px] font-normal text-gray-400">"{testimonial.quote}"</p>
-                <h3 className="mt-4 text-[20px] leading-[24px] font-extrabold">{testimonial.name}</h3>
-                <p className="text-[16px] leading-[29px] font-normal text-[#3F3A34]">{testimonial.position}</p>
+                <h3 className="mt-4 text-[20px] leading-[24px] text-[#ECE4D9] font-extrabold">{testimonial.name}</h3>
+                <p className="text-[16px] leading-[29px] font-normal text-[#ECE4D9]">{testimonial.position}</p>
               </div>
             </div>
           ))}

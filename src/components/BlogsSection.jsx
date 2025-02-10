@@ -32,7 +32,7 @@ const blogs = [
 
 const BlogsSection = () => {
   return (
-    <section className="bg-[#ECE4D9] text-[#3F3A34]  py-16">
+    <section className="bg-[#ECE4D9] text-[#3F3A34]  py-20">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="flex justify-between items-center mb-12">

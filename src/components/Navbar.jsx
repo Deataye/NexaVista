@@ -9,7 +9,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-black bg-opacity-80 text-white fixed w-full z-50">
+    <nav className="bg-[#1A1816] bg-opacity-80 text-white fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center px-6 py-3">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold flex items-center">
