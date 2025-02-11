@@ -2,65 +2,56 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-[#1A1816] bg-opacity-80 text-white fixed w-full z-50">
+    <nav className={`absolute w-full z-50  text-[#ECE4D9] ${poppins.className}`}>
       <div className="container mx-auto flex justify-between items-center px-6 py-3">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-20 w-20 mr-2" />
+          <img src="/logo.png" alt="Logo" className="h-32 w-32 mr-2" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex font-extrabold text-[15px] leading-[29px] space-x-6">
-          <Link href="/" className="hover:text-gray-300">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-gray-300">
-            About
-          </Link>
-          <div className="relative group">
-            <button
-              className="flex items-center gap-1 hover:text-gray-300"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              Services <ChevronDown size={14} />
-            </button>
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded-lg py-2 w-40">
-                <Link href="/services/web-development" className="block px-4 py-2 hover:bg-gray-200">
-                  Web Development
-                </Link>
-                <Link href="/services/app-development" className="block px-4 py-2 hover:bg-gray-200">
-                  App Development
-                </Link>
-                <Link href="/services/copywriting" className="block px-4 py-2 hover:bg-gray-200">
-                  Copywriting
-                </Link>
-                <Link href="/services/digital-marketing" className="block px-4 py-2 hover:bg-gray-200">
-                  Digital Marketing
-                </Link>
-                <Link href="/services/graphic-designing" className="block px-4 py-2 hover:bg-gray-200">
-                  Graphic Designing
-                </Link>
-              </div>
-            )}
+        <div className="hidden md:flex flex-col items-center text-[18px] leading-[29px]">
+          <div className="flex space-x-6 font-semibold">
+            <Link href="/" className="hover:underline">Home</Link>
+            <span>|</span>
+            <Link href="/services" className="hover:underline">Services</Link>
+            <span>|</span>
+            <Link href="/about" className="hover:underline">About Us</Link>
+            <span>|</span>
+            <Link href="/contact" className="hover:underline">Contact Us</Link>
           </div>
-          <Link href="/contact" className="hover:text-gray-300">
-            Contact Us
+          {/* Services below main navigation */}
+          <div className="flex space-x-6 mt-2 text-[18px] leading-[29px] font-semibold">
+            <Link href="/services/web-development" className="hover:underline">Web Development</Link>
+            <span>|</span>
+            <Link href="/services/app-development" className="hover:underline">App Development</Link>
+            <span>|</span>
+            <Link href="/services/copywriting" className="hover:underline">Copywriting</Link>
+            <span>|</span>
+            <Link href="/services/digital-marketing" className="hover:underline">Digital Marketing</Link>
+            <span>|</span>
+            <Link href="/services/graphic-designing" className="hover:underline">Graphic Designing</Link>
+          </div>
+        </div>
+
+        {/* Book an Appointment Button */}
+        <div className="hidden md:flex">
+          <Link href="/appointment" className="bg-white text-[#6B6159] px-6 py-3 rounded-lg text-[14px] leading-[20px] font-semibold shadow-md">
+            Book an Appointment
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
+        <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -68,42 +59,23 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-black bg-opacity-90 text-[#ECE4D9] flex flex-col space-y-4 p-4">
-          <Link href="/" className="hover:text-gray-300">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-gray-300">
-            About
-          </Link>
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 hover:text-gray-300"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              Services <ChevronDown size={14} />
-            </button>
-            {dropdownOpen && (
-              <div className="mt-2 bg-white text-black shadow-lg rounded-lg py-2 w-full">
-                <Link href="/services/web-development" className="block px-4 py-2 hover:bg-gray-200">
-                  Web Development
-                </Link>
-                <Link href="/services/app-development" className="block px-4 py-2 hover:bg-gray-200">
-                  App Development
-                </Link>
-                <Link href="/services/copywriting" className="block px-4 py-2 hover:bg-gray-200">
-                  Copywriting
-                </Link>
-                <Link href="/services/digital-marketing" className="block px-4 py-2 hover:bg-gray-200">
-                  Digital Marketing
-                </Link>
-                <Link href="/services/graphic-designing" className="block px-4 py-2 hover:bg-gray-200">
-                  Graphic Designing
-                </Link>
-              </div>
-            )}
-          </div>
-          <Link href="/contact" className="hover:text-gray-300">
-            Contact Us
-          </Link>
+          <Link href="/" className="hover:text-gray-300">Home</Link>
+          <span>|</span>
+          <Link href="/services" className="hover:text-gray-300">Services</Link>
+          <span>|</span>
+          <Link href="/about" className="hover:text-gray-300">About Us</Link>
+          <span>|</span>
+          <Link href="/contact" className="hover:text-gray-300">Contact Us</Link>
+          <hr className="border-gray-600" />
+          <Link href="/services/web-development" className="hover:text-gray-300">Web Development</Link>
+          <span>|</span>
+          <Link href="/services/app-development" className="hover:text-gray-300">App Development</Link>
+          <span>|</span>
+          <Link href="/services/copywriting" className="hover:text-gray-300">Copywriting</Link>
+          <span>|</span>
+          <Link href="/services/digital-marketing" className="hover:text-gray-300">Digital Marketing</Link>
+          <span>|</span>
+          <Link href="/services/graphic-designing" className="hover:text-gray-300">Graphic Designing</Link>
         </div>
       )}
     </nav>
@@ -111,4 +83,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

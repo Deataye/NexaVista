@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo & Company Info */}
         <div>
           <Link href="/" className="text-2xl font-bold flex items-center">
-            <img src="/logo.png" alt="Logo" className="h-12 w-12 mr-2" />
+            <img src="/logo.png" alt="Logo" className="h-20 w-20 mr-2" />
           </Link>
           <p className="mt-4 text-[16px] leading-[29px] font-normal text-[#ECE4D9]">
             NexaVista leads in web and mobile app development, serving startups, small businesses, and enterprises with premium solutions.

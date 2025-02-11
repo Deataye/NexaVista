@@ -15,7 +15,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs"; // Updated IT Consultanc
 
 const AboutServices = () => {
   return (
-    <section className="bg-[#ECE4D9] h-screen text-[#3F3A34] pt-20">
+    <section className="bg-[#ECE4D9]  text-[#3F3A34] pt-20">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Left Side - Image */}
         <div className="relative w-full lg:w-1/2">

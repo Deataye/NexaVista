@@ -1,5 +1,4 @@
 import AboutServices from "@/components/AboutServices";
-import BlogsSection from "@/components/BlogsSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -21,7 +20,6 @@ export default function Home() {
    <ContactForm/>
    <ProjectsSection/>
    <TestimonialsSection/>
-   <BlogsSection/>
    <Footer/>
    </>
   );

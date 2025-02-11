@@ -34,9 +34,9 @@ const TechnologiesSection = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: "#ECE4D9", color: "#1A1816", padding: "80px 0" }}>
+    <section style={{ backgroundColor: "#ECE4D9", color: "#1A1816", padding: "40px 0" }}>
       {/* Technology Partners */}
-      <div style={{ backgroundColor: "#1A1816", padding: "40px 120px" }}>
+      <div style={{ backgroundColor: "#1A1816", padding: "20px 200px" }}>
         <div
           ref={scrollRef}
           style={{
