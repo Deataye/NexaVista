@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link href="/contact" className="hover:underline">Contact Us</Link>
           </div>
           {/* Services below main navigation */}
-          <div className="flex space-x-6 mt-2 text-[18px] leading-[29px] font-semibold">
+          <div className="flex space-x-2 mt-2 text-[18px] leading-[29px] font-semibold">
             <Link href="/services/web-development" className="hover:underline">Web Development</Link>
             <span>|</span>
             <Link href="/services/app-development" className="hover:underline">App Development</Link>
