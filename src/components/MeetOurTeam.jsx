@@ -10,19 +10,19 @@ const teamMembers = [
     name: "Qandeel Khalid",
     role: "CMO",
     position: "Chief Marketing Officer",
-    image: "/qandeel khalid.jpg",
+    image: "/Qandeel Khalid.jpg",
   },
   {
     name: "Mirza Tayyab",
     role: "COO",
     position: "Chief Operations Officer",
-    image: "/mirza tayyab.jpg",
+    image: "/Mirza Tayyab.jpg",
   },
   {
     name: "Mirza Talha",
     role: "CEO & Co-Founder",
     position: "Chief Executive Officer",
-    image: "/mirza talha.jpg",
+    image: "/Mirza Talha.jpg",
   },
   {
     name: "Aniqa Noor",
@@ -34,7 +34,7 @@ const teamMembers = [
     name: "Uzair Shabbir",
     role: "CTO",
     position: "Chief Technology Officer",
-    image: "/uzair shabbir.jpg",
+    image: "/Uzair Shabbir.jpg",
   },
 ];
 
