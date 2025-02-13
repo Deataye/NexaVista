@@ -23,11 +23,11 @@ const Navbar = () => {
           <div className="flex space-x-6 font-semibold">
             <Link href="/" className="hover:underline">Home</Link>
             <span>|</span>
-            <Link href="/services" className="hover:underline">Services</Link>
+            <Link href="/Services" className="hover:underline">Services</Link>
             <span>|</span>
-            <Link href="/about" className="hover:underline">About Us</Link>
+            <Link href="/About" className="hover:underline">About Us</Link>
             <span>|</span>
-            <Link href="/contact" className="hover:underline">Contact Us</Link>
+            <Link href="/Contact" className="hover:underline">Contact Us</Link>
           </div>
           {/* Services below main navigation */}
           <div className="flex space-x-2 mt-2 text-[18px] leading-[29px] font-semibold">

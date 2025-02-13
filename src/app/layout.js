@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar"; // Adjust path if needed
 import "./globals.css"; // Global styles
+import Footer from "@/components/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
       <body className="min-h-screen">
         <Navbar />
         <main>{children}</main>
+        <Footer/>
       </body>
     </html>
   );

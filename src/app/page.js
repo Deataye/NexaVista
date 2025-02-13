@@ -11,7 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
-  <>
+    <main>
    <Navbar/>
    <HeroSection/>
    <AboutServices/>
@@ -21,6 +21,6 @@ export default function Home() {
    <ProjectsSection/>
    <TestimonialsSection/>
    <Footer/>
-   </>
+   </main>
   );
 }
