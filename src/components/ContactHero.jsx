@@ -28,7 +28,7 @@ export default function ContactHero() {
         {/* Contact Button */}
         <Link
           href="/contact"
-          className="inline-block bg-[#ECE4D9] text-[#3F3A34] px-8 py-3 rounded-full text-[18px] font-medium shadow-md hover:bg-[#D6C9BC] transition-all"
+          className="inline-block bg-[#ECE4D9] text-[#3F3A34] px-8 py-3 rounded-lg text-[18px] font-medium  hover:bg-[#D6C9BC] transition-all"
         >
           Contact Us
         </Link>
