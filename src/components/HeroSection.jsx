@@ -30,9 +30,9 @@ const HeroSection = () => {
       <div className="justify-center h-full max-w-[1550px] mx-auto">
         <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
           <h1 className="text-[68px] font-extrabold leading-tight">
-            We Build Websites,<br />
-            Apps And Strategies <br />
-            to Grow Your Business.
+            We Build Websites, Apps And <br />
+             
+             Strategies to Grow Your Business.
           </h1>
           <p className="mt-4 text-[20px] max-w-4xl">
             NexaVista Technologies is your partner in turning complex ideas into intuitive digital solutions that resonate with your audience.
@@ -61,10 +61,10 @@ const HeroSection = () => {
             >
               <stat.icon className="text-[#6B6159] group-hover:text-[#ECE4D9] mr-4 transition-colors" size={52} />
               <div>
-                <span className="text-[54px] text-[#6B6159] group-hover:text-[#ECE4D9] font-black transition-colors">
+                <span className="text-[54px] text-[#ECE4D9] group-hover:text-[#ECE4D9] font-black transition-colors">
                   {stat.value}+
                 </span>
-                <p className="text-[#6B6159] group-hover:text-[#ECE4D9] text-[18px] font-normal transition-colors">
+                <p className="text-[#ECE4D9] group-hover:text-[#ECE4D9] text-[18px] font-normal transition-colors">
                   {stat.label}
                 </p>
               </div>

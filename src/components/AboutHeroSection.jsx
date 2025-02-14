@@ -23,7 +23,7 @@ const AboutHeroSection = () => {
   return (
     <section className="relative py-4 w-full h-[960px] bg-black">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-40"
+      <div className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: "url('/Aboutherosection.jpg')" }}></div>
 
       {/* Content */}

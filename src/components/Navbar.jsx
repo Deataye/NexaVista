@@ -12,14 +12,14 @@ const Navbar = () => {
 
   return (
     <nav className={`absolute w-full z-50  text-[#ECE4D9] ${poppins.className}`}>
-      <div className="container mx-auto flex justify-between items-center px-6 py-3">
+      <div className="container mx-auto flex justify-between items-center  py-3">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold flex items-center">
           <img src="/logo.png" alt="Logo" className="h-32 w-32 mr-2" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-col items-center text-[18px] leading-[29px]">
+        <div className="hidden md:flex flex-col items-center text-[18px] leading-[28px]">
           <div className="flex space-x-6 font-semibold">
             <Link href="/" className="hover:underline">Home</Link>
             <span>|</span>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link href="/Contact" className="hover:underline">Contact Us</Link>
           </div>
           {/* Services below main navigation */}
-          <div className="flex space-x-2 mt-2 text-[18px] leading-[29px] font-semibold">
+          <div className="flex space-x-2 mt-2 text-[18px] leading-[28px] font-semibold">
             <Link href="/services/web-development" className="hover:underline">Web Development</Link>
             <span>|</span>
             <Link href="/services/app-development" className="hover:underline">App Development</Link>

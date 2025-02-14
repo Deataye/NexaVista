@@ -27,7 +27,7 @@ export default function JoinUs() {
           href="/contact"
           className="inline-block bg-[#3F3A34] hover:bg-[#2F2A24] text-[#ECE4D9] px-6 py-3 rounded-lg text-[16px] font-medium transition-all"
         >
-          Contact Us
+          Contact Us →
         </Link>
       </div>
     </section>
