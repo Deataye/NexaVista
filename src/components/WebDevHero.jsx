@@ -11,8 +11,8 @@ const WebDevHero = () => {
       <div className="container  flex flex-col lg:flex-row items-center justify-center px-6 lg:px-0 gap-20">
         
         {/* Left Side Content - Centered */}
-        <div className="lg: flex flex-col text-left text-[#ECE4D9]">
-          <h1 className="text-[48px] lg:text-[68px] font-extrabold leading-tight">
+        <div className="lg: flex flex-col  pt-14 text-left text-[#ECE4D9]">
+          <h1 className="text-[48px] lg:text-[68px] font-extrabold leading-[68px]">
             Web App Development <br /> Services
           </h1>
           <p className="mt-6 text-[20px] leading-[32px] max-w-2xl">
