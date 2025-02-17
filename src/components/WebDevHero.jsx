@@ -1,77 +1,42 @@
 "use client";
-import { useEffect, useState } from "react";
-import { FaRegCalendarAlt, FaTasks, FaUsers, FaSmile } from 'react-icons/fa';
+import Image from "next/image";
+import Link from "next/link";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const WebDevHero = () => {
-  // Counter Animation
-  const [experience, setExperience] = useState(0);
-  const [projects, setProjects] = useState(0);
-  const [developers, setDevelopers] = useState(0);
-  const [clients, setClients] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setExperience((prev) => (prev < 10 ? prev + 1 : prev));
-      setProjects((prev) => (prev < 500 ? prev + 10 : prev));
-      setDevelopers((prev) => (prev < 100 ? prev + 5 : prev));
-      setClients((prev) => (prev < 500 ? prev + 10 : prev));
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className={`relative py-4 w-full h-[960px] bg-black ${poppins.className}`}>
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: "url('/Home.jpg')" }}></div>
-
-      {/* Content */}
-      <div className="justify-center h-full max-w-[1550px] mx-auto">
-        <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
-          <h1 className="text-[68px] font-extrabold leading-tight">
-            From Web to App to Words, We bring <br />
-            your Brand Closer to your Audience 
+    <section className={`relative w-full h-screen bg-gradient-to-br from-[#1A1816] to-[#5c5143] flex items-center justify-center text-center ${poppins.className}`}>
+      <div className="container  flex flex-col lg:flex-row items-center justify-center px-6 lg:px-0 gap-20">
+        
+        {/* Left Side Content - Centered */}
+        <div className="lg: flex flex-col text-left text-[#ECE4D9]">
+          <h1 className="text-[48px] lg:text-[68px] font-extrabold leading-tight">
+            Web App Development <br /> Services
           </h1>
-          <p className="mt-4 text-[20px] max-w-4xl">
-            At NexaVista Technologies, we provide digital solutions to help your business succeed. From websites to mobile apps and content, our team brings your vision to life.
+          <p className="mt-6 text-[20px] leading-[32px] max-w-2xl">
+            Welcome to NexaVista Technologies, where innovation meets expertise in crafting unparalleled web solutions. 
+            Elevate your online presence and user experience with our top-notch web development services.
           </p>
-
-          {/* CTA Button */}
-          <button className="mt-6 bg-[#3F3A34] hover:bg-[#2F2A24] text-[#ECE4D9] px-6 py-3 rounded-lg text-[16px] font-medium transition-all">
-            Get In Touch →
-          </button>
+          <Link href="/contact">
+            <button className="mt-10 bg-[#ECE4D9] hover:bg-[#CFC7BD] text-[#1A1816] px-8 py-4 rounded-md text-[18px] font-medium transition-all">
+              Contact Us
+            </button>
+          </Link>
         </div>
-      </div>
 
-      {/* Stats Section */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[#1A1816] py-6">
-        <div className="container mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[#ECE4D9]">
-          {/* Counter Boxes with Group Hover */}
-          {[
-            { icon: FaRegCalendarAlt, value: experience, label: "Years Of Experience" },
-            { icon: FaTasks, value: projects, label: "Projects Completed" },
-            { icon: FaUsers, value: developers, label: "Skilled Developers" },
-            { icon: FaSmile, value: clients, label: "Satisfied Clients" },
-          ].map((stat, index) => (
-            <div 
-              key={index}
-              className="group flex items-center justify-center cursor-pointer transition-colors"
-            >
-              <stat.icon className="text-[#6B6159] group-hover:text-[#ECE4D9] mr-4 transition-colors" size={52} />
-              <div>
-                <span className="text-[54px] text-[#ECE4D9] group-hover:text-[#ECE4D9] font-black transition-colors">
-                  {stat.value}+
-                </span>
-                <p className="text-[#ECE4D9] group-hover:text-[#ECE4D9] text-[18px] font-normal transition-colors">
-                  {stat.label}
-                </p>
-              </div>
-            </div>
-          ))}
+        {/* Right Side Image - Bigger & Centered */}
+        <div className="lg: flex justify-center">
+          <Image 
+            src="/Home.jpg" 
+            alt="Web App Development"
+            width={900}  // Increased width
+            height={1100} // Increased height
+            className="rounded-lg shadow-xl object-cover"
+          />
         </div>
+
       </div>
     </section>
   );
