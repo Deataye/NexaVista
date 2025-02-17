@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const projects = [
   {
@@ -32,13 +35,13 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="bg-[#1A1816] text-[#ECE4D9] py-20">
+    <section className={`bg-[#1A1816] text-[#ECE4D9] py-20 ${poppins.className}`}>
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h3 className="text-[18px] leading-[22px] uppercase tracking-widest text-[#3F3A34] font-bold">Our Projects</h3>
           <h2 className="text-3xl md:text-[46px] leading-[55px] font-black">
-            Our Outstanding <span className="text-[#3F3A34] text-3xl md:text-[46px] leading-[55px] font-black ">Projects</span> & Works
+            Our Outstanding <span className="text-[#3F3A34] text-3xl md:text-[46px] leading-[55px] font-black">Projects</span> & Works
           </h2>
           <p className="mt-4 text-[16px] leading-[29px] text-gray-400">
             We develop on-demand customized projects for our clients in the given time.

@@ -1,6 +1,9 @@
 "use client"; // Required for React Hooks in Next.js App Router
 
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const testimonials = [
   {
@@ -31,7 +34,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className=" bg-[#ECE4D9] text-[#1A1816] py-20">
+    <section className={`bg-[#ECE4D9] text-[#1A1816] py-20 ${poppins.className}`}>
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-24">
@@ -39,7 +42,7 @@ const TestimonialsSection = () => {
             Our Testimonials
           </h3>
           <h2 className="text-3xl md:text-[46px] leading-[55px] font-black">
-            Check Out What  Our <br /> Clients Think  of <br /> {" "}
+            Check Out What Our <br /> Clients Think of <br />
             <span className="text-[#3F3A34]">Our Services</span>
           </h2>
         </div>
@@ -61,9 +64,15 @@ const TestimonialsSection = () => {
                 />
               </div>
               <div className="mt-10">
-                <p className="italic text-[16px] leading-[29px] font-normal text-gray-400">"{testimonial.quote}"</p>
-                <h3 className="mt-4 text-[20px] leading-[24px] text-[#ECE4D9] font-extrabold">{testimonial.name}</h3>
-                <p className="text-[16px] leading-[29px] font-normal text-[#ECE4D9]">{testimonial.position}</p>
+                <p className="italic text-[16px] leading-[29px] font-normal text-gray-400">
+                  "{testimonial.quote}"
+                </p>
+                <h3 className="mt-4 text-[20px] leading-[24px] text-[#ECE4D9] font-extrabold">
+                  {testimonial.name}
+                </h3>
+                <p className="text-[16px] leading-[29px] font-normal text-[#ECE4D9]">
+                  {testimonial.position}
+                </p>
               </div>
             </div>
           ))}

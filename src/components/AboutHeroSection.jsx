@@ -1,6 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { FaRegCalendarAlt, FaTasks, FaUsers, FaSmile } from 'react-icons/fa';
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const AboutHeroSection = () => {
   // Counter Animation
@@ -21,7 +24,7 @@ const AboutHeroSection = () => {
   }, []);
 
   return (
-    <section className="relative py-4 w-full h-[960px] bg-black">
+    <section className={`relative py-4 w-full h-[960px] bg-black ${poppins.className}`}>
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{ backgroundImage: "url('/Aboutherosection.jpg')" }}></div>
@@ -30,12 +33,11 @@ const AboutHeroSection = () => {
       <div className="justify-center h-full max-w-[1550px] mx-auto">
         <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
           <h1 className="text-[68px] font-extrabold leading-tight">
-          Our Journey, Mission<br />
-            
-          at NexaVista Technologies
+            Our Journey, Mission<br />
+            at NexaVista Technologies
           </h1>
           <p className="mt-4 text-[20px] max-w-4xl">
-          NexaVista Technologies empowers businesses with innovative digital solutions. Our passionate team combines expertise and creativity to harness technology for meaningful growth and transformation.
+            NexaVista Technologies empowers businesses with innovative digital solutions. Our passionate team combines expertise and creativity to harness technology for meaningful growth and transformation.
           </p>
 
           {/* CTA Button */}

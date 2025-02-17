@@ -10,12 +10,15 @@ import {
   FaBitcoin,
 } from "react-icons/fa";
 import { SiArduino } from "react-icons/si";
-import { MdOutlineMilitaryTech } from "react-icons/md"; // Updated Technical Advancements Icon
-import { BsFillPersonLinesFill } from "react-icons/bs"; // Updated IT Consultancy Icon
+import { MdOutlineMilitaryTech } from "react-icons/md";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const AboutServices = () => {
   return (
-    <section className="bg-[#ECE4D9]  text-[#3F3A34] pt-20">
+    <section className={`bg-[#ECE4D9] text-[#3F3A34] pt-20 ${poppins.className}`}>
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Left Side - Image */}
         <div className="relative w-full lg:w-1/2">

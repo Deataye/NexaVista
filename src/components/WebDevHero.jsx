@@ -5,7 +5,7 @@ import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
-const HeroSection = () => {
+const WebDevHero = () => {
   // Counter Animation
   const [experience, setExperience] = useState(0);
   const [projects, setProjects] = useState(0);
@@ -26,18 +26,17 @@ const HeroSection = () => {
   return (
     <section className={`relative py-4 w-full h-[960px] bg-black ${poppins.className}`}>
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url('/Home.jpg')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: "url('/Home.jpg')" }}></div>
 
       {/* Content */}
       <div className="justify-center h-full max-w-[1550px] mx-auto">
         <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-[#ECE4D9]">
           <h1 className="text-[68px] font-extrabold leading-tight">
-            We Build Websites, Apps And <br />
-            Strategies to Grow Your Business.
+            From Web to App to Words, We bring <br />
+            your Brand Closer to your Audience 
           </h1>
           <p className="mt-4 text-[20px] max-w-4xl">
-            NexaVista Technologies is your partner in turning complex ideas into intuitive digital solutions that resonate with your audience.
+            At NexaVista Technologies, we provide digital solutions to help your business succeed. From websites to mobile apps and content, our team brings your vision to life.
           </p>
 
           {/* CTA Button */}
@@ -78,4 +77,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default WebDevHero;

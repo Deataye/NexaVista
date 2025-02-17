@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const ContactForm = () => {
   const [captcha, setCaptcha] = useState(generateCaptcha());
@@ -25,8 +28,8 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="bg-[#ECE4D9] text-[#ECE4D9] py-20">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center px-">
+    <section className={`bg-[#ECE4D9] text-[#ECE4D9] py-20 ${poppins.className}`}>
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
         {/* Left - Image */}
         <div className="lg:w-1/2 hidden lg:flex justify-end">
           <Image
@@ -39,7 +42,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right - Contact Form */}
-        <div className="lg:w-1/2 bg-[#ECE4D9] text-[#1A1816] p-8 rounded-lg ">
+        <div className="lg:w-1/2 bg-[#ECE4D9] text-[#1A1816] p-8 rounded-lg">
           <h2 className="text-[46px] leading-[55px] font-black mb-4">What Can We Do For You?</h2>
           <p className="text-[16px] leading-[29px] font-normal mb-6">
             If you have any questions or need assistance, feel free to contact us and send us a message.
@@ -76,7 +79,7 @@ const ContactForm = () => {
 
             {/* Captcha */}
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#1A1816] text-[16px] leading-[29px]  font-bold">{captcha.question}</span>
+              <span className="text-[#1A1816] text-[16px] leading-[29px] font-bold">{captcha.question}</span>
               <input
                 type="text"
                 value={captchaInput}
@@ -95,7 +98,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-[#3F3A34] text-[#ECE4D9] text-[16px] leading-[26px] font-medium px-6 py-2 rounded-md  w-full"
+              className="bg-[#3F3A34] text-[#ECE4D9] text-[16px] leading-[26px] font-medium px-6 py-2 rounded-md w-full"
             >
               Submit Now
             </button>

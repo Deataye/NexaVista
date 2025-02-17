@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { Mail, Phone, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1816] text-[#ECE4D9] py-12">
+    <footer className={`bg-[#1A1816] text-[#ECE4D9] py-12 ${poppins.className}`}>
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & Company Info */}
         <div>
