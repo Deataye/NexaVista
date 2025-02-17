@@ -18,9 +18,9 @@ const WebSuccessStories = () => {
       <h2 className="text-[46px] leading-[55px] font-bold mb-6">
         View Our <span className="text-[#6B6159]">Success Stories</span> of Web Application
       </h2>
-      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center ">
+      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
         {/* Left Side Content */}
-        <div className="lg:w-1/2 bg-[#6B6159] text-[#ECE4D9] p-10 rounded-lg shadow-lg">
+        <div className="lg:w-1/2 bg-[#6B6159] text-[#ECE4D9] p-[39px] rounded-l-lg lg:rounded-l-lg lg:rounded-r-none shadow-lg">
           <h3 className="text-3xl font-bold mb-6 leading-tight">
             Why Do Medium & Large Businesses Choose Custom Apps More Often?
           </h3>
@@ -34,13 +34,13 @@ const WebSuccessStories = () => {
         </div>
         
         {/* Right Side Image */}
-        <div className="lg:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex">
           <Image
-            src="/Expertise_WebDev.jpg" // Replace with actual image path
+            src="/webdev_3.jpg" // Replace with actual image path
             alt="Success Stories"
             width={600}
-            height={400}
-            className="rounded-lg shadow-lg"
+            height={500}
+            className="rounded-r-lg lg:rounded-r-lg lg:rounded-l-none shadow-lg"
           />
         </div>
       </div>
