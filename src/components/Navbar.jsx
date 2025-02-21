@@ -33,13 +33,13 @@ const Navbar = () => {
           <div className="flex space-x-2 mt-2 text-[18px] leading-[28px] font-semibold">
             <Link href="/Services/WebDev" className="hover:underline">Web Development</Link>
             <span>|</span>
-            <Link href="/services/app-development" className="hover:underline">App Development</Link>
+            <Link href="/Services/AppDev" className="hover:underline">App Development</Link>
             <span>|</span>
-            <Link href="/services/copywriting" className="hover:underline">Copywriting</Link>
+            <Link href="/Services/CopyWriting" className="hover:underline">Copywriting</Link>
             <span>|</span>
-            <Link href="/services/digital-marketing" className="hover:underline">Digital Marketing</Link>
+            <Link href="/Services/DigitalMarketing" className="hover:underline">Digital Marketing</Link>
             <span>|</span>
-            <Link href="/services/graphic-designing" className="hover:underline">Graphic Designing</Link>
+            <Link href="/Services/GraphicDesigning" className="hover:underline">Graphic Designing</Link>
           </div>
         </div>
 

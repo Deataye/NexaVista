@@ -28,7 +28,7 @@ const teamMembers = [
     name: "Aniqa Noor",
     role: "CCO",
     position: "Chief Content Officer",
-    image: "/aniqa noor.jpg",
+    image: "/Aniqa Noor.jpg",
   },
   {
     name: "Uzair Shabbir",
