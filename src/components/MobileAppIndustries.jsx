@@ -1,5 +1,5 @@
 "use client";
-import { FaHeartbeat, FaShoppingCart, FaBuilding, FaIndustry, FaGraduationCap, FaBolt } from "react-icons/fa";
+import { FaHeartbeat, FaShoppingCart, FaBuilding, FaIndustry, FaGraduationCap, FaBolt, FaCar, FaUtensils } from "react-icons/fa";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
@@ -9,45 +9,57 @@ const MobileAppIndustries = () => {
     {
       title: "Healthcare",
       description:
-        "In healthcare web app development, we focus on creating solutions that enhance patient care, streamline operations, and facilitate communication among healthcare professionals. Our applications prioritize security, compliance, and interoperability to improve healthcare delivery.",
+        "We develop secure and compliant mobile apps for healthcare, enabling telemedicine, patient management, and real-time health monitoring for enhanced patient care.",
       icon: <FaHeartbeat className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
     {
       title: "eCommerce",
       description:
-        "In eCommerce, our web app development services focus on creating secure, scalable, and user-friendly platforms. We aim to provide a seamless shopping experience, incorporating secure payment gateways, inventory management, and personalized user interfaces to drive online sales.",
+        "Empowering businesses with feature-rich mobile commerce apps that offer seamless shopping experiences, secure transactions, and personalized recommendations.",
       icon: <FaShoppingCart className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
     {
       title: "Real Estate",
       description:
-        "For real estate, our web applications streamline property management, facilitate online property listings, and improve communication between agents and clients. We focus on creating visually appealing and user-friendly platforms that enhance the property buying and selling experience.",
+        "Building intuitive mobile solutions for property listings, virtual tours, and agent-client interactions, streamlining the real estate buying and selling process.",
       icon: <FaBuilding className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
     {
       title: "Manufacturing",
       description:
-        "For the manufacturing industry, our web app development addresses process optimization, inventory management, and supply chain coordination. We create robust solutions that improve production efficiency, reduce costs, and provide real-time insights into manufacturing operations.",
+        "Enhancing efficiency with mobile apps for inventory management, supply chain tracking, and real-time production monitoring in the manufacturing sector.",
       icon: <FaIndustry className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
     {
       title: "Education",
       description:
-        "Our web app development services in the education sector cater to e-learning platforms, student management systems, and administrative tools. We aim to enhance collaboration, accessibility, and engagement, creating innovative solutions to support modern educational needs.",
+        "Transforming learning with mobile apps for virtual classrooms, e-learning, student management, and interactive educational experiences.",
       icon: <FaGraduationCap className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
     {
-      title: "On-Demand",
+      title: "On-Demand Services",
       description:
-        "In the on-demand industry, our web app development caters to platforms that connect service providers with users in real time. Whether it's ride-sharing, food delivery, or other on-demand services, we focus on creating intuitive and reliable platforms that prioritize user experience and efficiency.",
+        "Developing real-time booking and delivery apps for ride-hailing, home services, and food delivery, ensuring seamless user experience and efficient service connections.",
       icon: <FaBolt className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
+    },
+    {
+      title: "Automotive",
+      description:
+        "Designing mobile apps for car rentals, vehicle tracking, and smart automotive services to enhance user convenience and operational efficiency.",
+      icon: <FaCar className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
+    },
+    {
+      title: "Food & Hospitality",
+      description:
+        "Creating mobile apps for restaurant reservations, food delivery, and hospitality management, enhancing customer engagement and operational ease.",
+      icon: <FaUtensils className="text-[#ECE4D9] hover:text-[#3F3A34] transition-colors text-3xl" />,
     },
   ];
 
   return (
     <section className={`py-16 bg-[#6B6159] text-center ${poppins.className}`}>
       <h2 className="text-[46px] text-[#ECE4D9] leading-[55px] font-bold mb-6">
-        <span className="text-[#1A1816]">Industries</span> We Serve
+        <span className="text-[#1A1816]">Industries</span> We Serve in Mobile App Development
       </h2>
       <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
         {industries.map((industry, index) => (

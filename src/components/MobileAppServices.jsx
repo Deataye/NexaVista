@@ -1,53 +1,52 @@
 "use client";
 import Link from "next/link";
-import { FaSitemap, FaLaptopCode, FaCogs, FaCode, FaMobileAlt, FaShoppingCart } from "react-icons/fa";
+import { FaApple, FaAndroid, FaSyncAlt, FaMobileAlt, FaPalette, FaRocket } from "react-icons/fa";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
-const MobileAppServices
- = () => {
+const MobileAppServices = () => {
   const services = [
     {
-      title: "SaaS Development",
+      title: "iOS App Development",
       description:
-        "Delivering Software as a Service (SaaS) solutions, we design and develop cloud-based applications that offer flexibility, scalability, and accessibility, revolutionizing how businesses operate and innovate.",
-      icon: <FaSitemap className="text-[#ECE4D9] text-4xl" />,
+        "Crafting top-tier iOS applications using Swift, ensuring seamless performance, high security, and a stunning user experience. We integrate Apple’s ecosystem features like Siri, Apple Pay, and more for a premium app experience.",
+      icon: <FaApple className="text-[#ECE4D9] text-4xl" />,
       bgColor: "bg-[#6B6159]",
     },
     {
-      title: "Open Source Web Development & Revamp",
+      title: "Android App Development",
       description:
-        "Harnessing the power of open-source technologies, we revamp and optimize web applications, ensuring cost-effectiveness, security, and the latest features while leveraging community-driven innovation.",
-      icon: <FaLaptopCode className="text-[#ECE4D9] text-4xl" />,
+        "Building scalable and high-performance Android apps with Flutter, Google’s powerful UI toolkit. Our apps are visually appealing, responsive, and optimized for seamless deployment on Google Play.",
+      icon: <FaAndroid className="text-[#ECE4D9] text-4xl" />,
       bgColor: "bg-[#6B6159]",
     },
     {
-      title: "Custom Web App Development",
+      title: "Cross-Platform Development",
       description:
-        "Crafting tailored solutions to meet unique business needs, our custom application development ensures your software aligns perfectly with your goals.",
-      icon: <FaCogs className="text-[#ECE4D9] text-4xl" />,
+        "Developing efficient, high-quality apps with React Native, allowing businesses to target both iOS and Android with a unified codebase. Enjoy native performance with seamless updates and consistent UX across platforms.",
+      icon: <FaSyncAlt className="text-[#ECE4D9] text-4xl" />,
       bgColor: "bg-[#6B6159]",
     },
     {
-      title: "Front-End Development Services",
+      title: "Custom Mobile App Solutions",
       description:
-        "Elevating user interfaces with cutting-edge front-end development, we enhance your web applications’ visual appeal, functionality, and interactivity, ensuring a captivating user journey.",
-      icon: <FaCode className="text-[#ECE4D9] text-4xl" />,
-      bgColor: "bg-[#6B6159]",
-    },
-    {
-      title: "Responsive Design",
-      description:
-        "Creating websites that adapt seamlessly to various devices, our responsive design services guarantee optimal user experiences, whether on desktops, tablets, or smartphones.",
+        "We create tailored mobile applications designed to meet your business objectives, ensuring high performance, robust security, and user-centric design.",
       icon: <FaMobileAlt className="text-[#ECE4D9] text-4xl" />,
       bgColor: "bg-[#6B6159]",
     },
     {
-      title: "E-Commerce Development",
+      title: "UI/UX Design for Mobile Apps",
       description:
-        "Empowering businesses with secure and scalable e-commerce solutions, our development expertise ensures an immersive online shopping experience, driving sales and customer satisfaction.",
-      icon: <FaShoppingCart className="text-[#ECE4D9] text-4xl" />,
+        "Enhancing mobile app usability with sleek, intuitive designs that align with platform aesthetics and drive user engagement.",
+      icon: <FaPalette className="text-[#ECE4D9] text-4xl" />,
+      bgColor: "bg-[#6B6159]",
+    },
+    {
+      title: "Mobile Performance Optimization",
+      description:
+        "Optimizing apps for speed, efficiency, and minimal resource consumption, ensuring smooth performance across all devices.",
+      icon: <FaRocket className="text-[#ECE4D9] text-4xl" />,
       bgColor: "bg-[#6B6159]",
     },
   ];
@@ -56,10 +55,10 @@ const MobileAppServices
     <section className={`py-16 bg-[#ECE4D9] text-[#3F3A34] ${poppins.className}`}>
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <h2 className="text-[46px] leading-[55px] font-black mb-4">
-          Web Application <span className="text-[#6B6159]">Development</span> Services
+          Mobile Application <span className="text-[#6B6159]">Development</span> Services
         </h2>
         <p className="text-[#6B6159] mb-10">
-          At <Link href="/" className="text-[#3F3A34] font-semibold">NexaVistaTechnologies</Link>, we specialize in crafting bespoke solutions that transcend industry standards. From scalable e-commerce platforms to innovative custom applications, our services are tailored to elevate your digital experience and drive sustainable growth.
+          At <Link href="/" className="text-[#3F3A34] font-semibold">NexaVistaTechnologies</Link>, we specialize in delivering cutting-edge mobile solutions. Whether you need a native iOS or Android app, or a cross-platform solution, our expertise ensures high performance, seamless user experience, and scalable solutions.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -75,5 +74,4 @@ const MobileAppServices
   );
 };
 
-export default MobileAppServices
-;
+export default MobileAppServices;

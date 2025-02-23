@@ -7,22 +7,22 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600
 
 const MobileAppStories = () => {
   const points = [
-    "Agile Web Design & Development Methodology",
-    "Award Winning Web Solutions & Sites",
-    "Competitive Rates for Web Design and Development Talent",
-    "Agile Web Design and Development Methodology",
+    "Agile Mobile App Development Process",
+    "Award-Winning iOS & Android Applications",
+    "Competitive Rates for Mobile Development Talent",
+    "Seamless User Experience & Scalable Solutions",
   ];
 
   return (
     <section className={`py-16 bg-[#ECE4D9] text-[#3F3A34] text-center ${poppins.className}`}>
       <h2 className="text-[46px] leading-[55px] font-bold mb-6">
-        View Our <span className="text-[#6B6159]">Success Stories</span> of Web Application
+        View Our <span className="text-[#6B6159]">Success Stories</span> in Mobile App Development
       </h2>
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
         {/* Left Side Content */}
         <div className="lg:w-1/2 bg-[#6B6159] text-[#ECE4D9] p-[39px] rounded-l-lg lg:rounded-l-lg lg:rounded-r-none shadow-lg">
           <h3 className="text-3xl font-bold mb-6 leading-tight">
-            Why Do Medium & Large Businesses Choose Custom Apps More Often?
+            Why Do Medium & Large Businesses Choose Custom Mobile Apps?
           </h3>
           <ul className="space-y-4 text-left">
             {points.map((point, index) => (
@@ -36,7 +36,7 @@ const MobileAppStories = () => {
         {/* Right Side Image */}
         <div className="lg:w-1/2 flex">
           <Image
-            src="/webdev_3.jpg" // Replace with actual image path
+            src="/Expertise_AppDev.jpg" // Replace with actual image path
             alt="Success Stories"
             width={600}
             height={500}

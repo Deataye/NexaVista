@@ -1,5 +1,6 @@
 import MobileAppAgile from "@/components/MobileAppAgile";
 import MobileAppEnsures from "@/components/MobileAppEnsures";
+import MobileAppFaqs from "@/components/MobileAppFaqs";
 import MobileAppHero from "@/components/MobileAppHero";
 import MobileAppIndustries from "@/components/MobileAppIndustries";
 import MobileAppServices from "@/components/MobileAppServices";
@@ -15,6 +16,7 @@ export default function AppDev() {
       <MobileAppAgile/>
       <MobileAppStories/>
       <MobileAppIndustries/>
+      <MobileAppFaqs/>
       
       </main>
     );

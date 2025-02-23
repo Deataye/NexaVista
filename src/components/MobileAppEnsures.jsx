@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowsAlt, FaCalendarAlt, FaUsers, FaShieldAlt } from "react-icons/fa";
+import { FaMobileAlt, FaRocket, FaUsers, FaShieldAlt } from "react-icons/fa";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
@@ -9,27 +9,27 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600
 const MobileAppEnsures = () => {
   const features = [
     {
-      title: "Flexible, Efficient Scaling",
+      title: "Scalable & High-Performance Apps",
       description:
-        "NexaVista Technologies ensures your web solutions can adapt effortlessly to changing needs. Our scalable approach guarantees efficient growth, seamlessly accommodating increased user traffic or additional functionalities for a responsive and dynamic digital experience.",
-      icon: <FaArrowsAlt className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
+        "NexaVista Technologies builds mobile applications that scale effortlessly with your business growth. Whether it’s handling increased user traffic or adding new features, our apps remain responsive, efficient, and future-proof.",
+      icon: <FaMobileAlt className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
     },
     {
-      title: "Long-Term Predictability",
+      title: "Optimized Speed & Performance",
       description:
-        "Planning for the future is integral. NexaVista Technologies provides a strategic roadmap for your web projects, ensuring stability and predictability over time. Our approach considers future expansions, updates, and advancements, offering a reliable and sustainable digital foundation.",
-      icon: <FaCalendarAlt className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
+        "Speed matters in mobile apps. Our optimization strategies ensure smooth performance, fast load times, and minimal resource consumption across all devices, keeping users engaged and satisfied.",
+      icon: <FaRocket className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
     },
     {
-      title: "Team of 1,000+ Engineers",
+      title: "Expert Development Team",
       description:
-        "With a vast team of over 1,000 skilled engineers, NexaVista Technologies brings unparalleled expertise to your projects. Our diverse and experienced workforce ensures the successful execution of your web development needs, meeting the highest standards of quality and innovation.",
+        "Our skilled mobile developers specialize in native iOS (Swift), Android (Flutter), and cross-platform (React Native) apps. With experience across multiple industries, we ensure high-quality, innovative solutions tailored to your business needs.",
       icon: <FaUsers className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
     },
     {
-      title: "Strong Security",
+      title: "Robust Security & Compliance",
       description:
-        "Security is paramount at NexaVista Technologies. We implement robust measures to safeguard your digital assets and sensitive data. We ensure a trustworthy and secure online presence for your business through regular security assessments, encryption protocols, and adherence to industry best practices.",
+        "Security is a top priority at NexaVista Technologies. We integrate advanced encryption, secure authentication, and compliance measures to safeguard your app’s data and protect users from security threats.",
       icon: <FaShieldAlt className="text-[#6B6159] hover:text-[#3F3A34] transition-colors text-[125px]" />,
     },
   ];
@@ -41,7 +41,7 @@ const MobileAppEnsures = () => {
         <div className="relative w-full lg:w-1/2">
           <Image
             src="/request-a-call-back-im1.jpg" // Replace with actual image path
-            alt="Web Development Company"
+            alt="Mobile App Development"
             width={500}
             height={500}
             className="rounded-lg shadow-lg"
@@ -51,7 +51,8 @@ const MobileAppEnsures = () => {
         {/* Right Side - Content */}
         <div className="w-full lg:w-1/2">
           <h2 className="text-[46px] font-black leading-[55px] pb-10">
-            <span className="text-[#6B6159]">NexaVista Technologies</span>, As a Web Development Company, Ensures
+            <span className="text-[#6B6159]">NexaVista Technologies</span> Ensures Seamless{" "}
+            <span className="text-[#6B6159]">Mobile App Development</span>
           </h2>
           <div className="space-y-6">
             {features.map((feature, index) => (
@@ -68,7 +69,7 @@ const MobileAppEnsures = () => {
             href="/contact"
             className="mt-8 inline-block bg-[#3F3A34] hover:bg-[#2F2A24] text-[#ECE4D9] px-6 py-3 rounded-lg text-lg font-medium transition-all"
           >
-            Work with us
+            Start Your Mobile App Project
           </Link>
         </div>
       </div>
