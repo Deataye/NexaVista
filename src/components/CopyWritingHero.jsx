@@ -1,19 +1,55 @@
 "use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 const CopyWritingHero = () => {
+  const sectionRef = useRef(null);
+  const textRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      textRef.current,
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: { trigger: textRef.current, start: "top 85%" },
+      }
+    );
+
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: { trigger: imageRef.current, start: "top 85%" },
+      }
+    );
+  }, []);
+
   return (
-    <section 
+    <section
+      ref={sectionRef}
       className={`relative w-full h-screen bg-[#514C4A] flex items-center justify-center text-center ${poppins.className}`}
     >
       <div className="container flex flex-col lg:flex-row items-center justify-center px-6 lg:px-0 gap-10">
         
         {/* Left Side Content */}
-        <div className="flex flex-col pt-14 text-left text-[#ECE4D9] max-w-2xl">
+        <div ref={textRef} className="flex flex-col pt-14 text-left text-[#ECE4D9] max-w-2xl">
           <h1 className="text-[48px] lg:text-[60px] font-extrabold leading-[68px]">
             Words That Sell, Stories That <span className="text-[#6B6159]">Convert</span>
           </h1>
@@ -30,23 +66,24 @@ const CopyWritingHero = () => {
         </div>
 
         {/* Right Side Image - Overlapping Images */}
-        <div className="relative w-[1200px] flex border-[10px] rounded-sm border-[#514C4A] justify-center">
+        <div ref={imageRef} className="relative w-[1200px] flex border-[10px] rounded-sm border-[#514C4A] justify-center">
           {/* Large Image */}
-          <Image 
+          <Image
             src="/copy3.jpg"
             alt="Copywriting in Action"
-            width={1000}  
-            height={1200} 
-            className="object-cover rounded-sm shadow-2xl"
+            width={1000}
+            height={1200}
+            className="object-cover rounded-sm shadow-2xl transition-transform duration-500 hover:scale-105"
           />
 
           {/* Small Overlapping Image */}
           <div className="absolute bottom-0 left-0 border-[10px] shadow-2xl rounded-sm border-[#514C4A]">
-            <Image 
+            <Image
               src="/copy7.jpg"
               alt="Persuasive Copywriting"
-              width={200}  
+              width={200}
               height={300}
+              className="transition-transform duration-500 hover:scale-110"
             />
           </div>
         </div>

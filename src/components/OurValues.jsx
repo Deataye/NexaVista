@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { FaLightbulb, FaClipboardList, FaSmile } from "react-icons/fa";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
@@ -13,7 +15,7 @@ const values = [
     description:
       "Innovation is at the heart of everything we do. We explore new technologies to provide cutting-edge solutions for our clients.",
     icon: FaLightbulb,
-    image: "/TrackRecord.jpg", // Replace with actual image paths
+    image: "/TrackRecord.jpg",
   },
   {
     title: "Client-Centricity",
@@ -35,17 +37,39 @@ export default function OurValues() {
   const [activeValue, setActiveValue] = useState(0);
   const timeoutRef = useRef(null);
   const touchStartX = useRef(null);
+  const sectionRef = useRef(null);
+  const buttonsRef = useRef(null);
 
-  // Auto-slide function
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade in section heading & buttons
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out", scrollTrigger: sectionRef.current }
+    );
+
+    gsap.fromTo(
+      buttonsRef.current.children,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: buttonsRef.current,
+      }
+    );
+
     timeoutRef.current = setInterval(() => {
       setActiveValue((prev) => (prev + 1) % values.length);
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timeoutRef.current);
   }, []);
 
-  // Handle click and drag functionality
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -65,6 +89,7 @@ export default function OurValues() {
 
   return (
     <section
+      ref={sectionRef}
       className={`relative py-20 text-[#ECE4D9] text-center ${poppins.className}`}
       style={{ backgroundImage: "url('/Values.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
@@ -77,12 +102,12 @@ export default function OurValues() {
         <h2 className="text-[36px] md:text-[46px] font-black mb-8">Our Values</h2>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div ref={buttonsRef} className="flex justify-center gap-4 mb-12">
           {values.map((value, index) => (
             <button
               key={index}
               onClick={() => setActiveValue(index)}
-              className={`px-6 py-2 rounded-full text-[16px] font-semibold transition-all ${
+              className={`px-6 py-2 rounded-full text-[16px] font-semibold transition-all transform hover:scale-105 ${
                 activeValue === index
                   ? "bg-[#3F3A34] text-[#ECE4D9]"
                   : "bg-[#ECE4D9] text-[#3F3A34] hover:bg-[#D6C9BC]"
@@ -110,19 +135,25 @@ export default function OurValues() {
               }}
             >
               {/* Text + Image Wrapper */}
-              <div className="flex flex-col md:flex-row bg-[#3F3A34] text-[#ECE4D9] rounded-xl shadow-lg w-full">
+              <div
+                className="flex flex-col md:flex-row bg-[#3F3A34] text-[#ECE4D9] rounded-xl shadow-lg w-full transition-all duration-300 transform hover:scale-105 hover:bg-[#ECE4D9] hover:text-[#3F3A34]"
+              >
                 {/* Text Content */}
                 <div className="p-8 md:w-1/2 flex flex-col items-center justify-center">
                   {/* Icon */}
-                  <div className="text-[#E9C46A] text-5xl mb-4">
+                  <div className="text-[#E9C46A] text-5xl mb-4 transition-all duration-300 group-hover:text-[#3F3A34]">
                     <value.icon />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-[22px] font-extrabold mb-3">{value.title}</h3>
+                  <h3 className="text-[22px] font-extrabold mb-3 transition-all duration-300">
+                    {value.title}
+                  </h3>
 
                   {/* Description */}
-                  <p className="text-[16px] leading-[26px]">{value.description}</p>
+                  <p className="text-[16px] leading-[26px] transition-all duration-300">
+                    {value.description}
+                  </p>
                 </div>
 
                 {/* Image */}

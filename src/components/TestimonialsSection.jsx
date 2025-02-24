@@ -1,7 +1,10 @@
-"use client"; // Required for React Hooks in Next.js App Router
+"use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
@@ -33,8 +36,50 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const sectionRef = useRef(null);
+  const testimonialRefs = useRef([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Heading Animation
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 85%",
+        },
+      }
+    );
+
+    // Testimonials Animation
+    testimonialRefs.current.forEach((testimonial, index) => {
+      gsap.fromTo(
+        testimonial,
+        { opacity: 0, y: 50, x: index % 2 === 0 ? -50 : 50 },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: testimonial,
+            start: "top 90%",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-    <section className={`bg-[#ECE4D9] text-[#1A1816] py-20 ${poppins.className}`}>
+    <section ref={sectionRef} className={`bg-[#ECE4D9] text-[#1A1816] py-20 ${poppins.className}`}>
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-24">
@@ -49,12 +94,13 @@ const TestimonialsSection = () => {
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="relative bg-[#25221E] p-6 rounded-lg shadow-lg text-center"
+              ref={(el) => (testimonialRefs.current[index] = el)}
+              className="relative bg-[#25221E] p-6 rounded-lg shadow-lg text-center transition-all duration-300 hover:bg-[#3F3A34] hover:scale-105"
             >
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 transition-transform duration-300 hover:scale-110">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -64,7 +110,7 @@ const TestimonialsSection = () => {
                 />
               </div>
               <div className="mt-10">
-                <p className="italic text-[16px] leading-[29px] font-normal text-gray-400">
+                <p className="italic text-[16px] leading-[29px] font-normal text-gray-400 transition-colors duration-300 hover:text-[#ECE4D9]">
                   "{testimonial.quote}"
                 </p>
                 <h3 className="mt-4 text-[20px] leading-[24px] text-[#ECE4D9] font-extrabold">
